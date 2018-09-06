@@ -24,6 +24,7 @@ class LecturerController extends Controller
 		# code...
 
 		//test
+		//test2
 	}
 
 
