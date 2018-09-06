@@ -22,6 +22,8 @@ class LecturerController extends Controller
 	public function lecturerAdd()
 	{
 		# code...
+
+		//test
 	}
 
 
