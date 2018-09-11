@@ -21,10 +21,9 @@ class LecturerController extends Controller
      */
 	public function lecturerAdd()
 	{
-		# code...
-
-		//test
-		//test2
+		
+		return view ('Lecturer.lecturer_add');
+		
 	}
 
 
@@ -35,9 +34,40 @@ class LecturerController extends Controller
      * @param  null
      * @return Response
      */
-	public function lecturerSave()
+	public function lecturerSave(Request $request)
 	{
-		# code...
+		
+		$this->validate($request,[
+               
+                'name'=>'required|min:3|max:255',
+                'nic'=>'required|regex:/[0-9]{9}V/',
+                'address'=>'required|min:3|max:255',
+                'mobno'=>'required |regex:/0[0-9]{9}/',
+                'email'=>'required|regex:/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/',	
+                'qulifications'=>'required| min:3|max:255',
+                
+                
+                
+               
+               
+                
+        ]);
+
+	$student = Student::create([
+            'name' => $request->name,
+            'nic' => $request->nic,
+            'address' => $request->address,
+            'mobileNo' => $request->Mobile,
+            'email' => $request->Email,
+            'qualification' => $request->qulifications,
+            'dob'=> $request->date
+            
+        ]);
+
+
+		// dd($requset->all());
+
+			// return view ('Lecturer.lecturer_add');
 	}
 
 

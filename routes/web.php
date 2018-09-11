@@ -16,7 +16,7 @@
 //     return view('welcome');
 // });
 
-Route::get('admin/master','AdminController@view');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,3 +30,5 @@ Route::get('lecturer/lecturer_view','LecturerController@lecturerView');
 Route::get('lecturer/lecturer_view','LecturerController@lecturerSearch');
 Route::get('lecturer/lecturer_update','LecturerController@lecturerUpdate');
 Route::get('lecturer/lecturer_delete','LecturerController@lecturerDelete');
+
+Route::get('admin/master','AdminController@view');
