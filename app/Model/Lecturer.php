@@ -7,7 +7,7 @@ class Lecturer extends Model
 {
  
  use SoftDeletes;
-	//STUDENT TABLE
+	//lecturer TABLE
     protected $guarded = ['id'];
     protected $dates = ['deleted_at'];
 

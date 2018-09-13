@@ -22,7 +22,7 @@ class LecturerController extends Controller
 	public function lecturerAdd()
 	{
 		
-		return view ('Lecturer.lecturer_add');
+		return view ('lecturer/lecturer_add');
 		
 	}
 
@@ -37,37 +37,33 @@ class LecturerController extends Controller
 	public function lecturerSave(Request $request)
 	{
 		
-		$this->validate($request,[
+		// $this->validate($request,[
                
-                'name'=>'required|min:3|max:255',
-                'nic'=>'required|regex:/[0-9]{9}V/',
-                'address'=>'required|min:3|max:255',
-                'mobno'=>'required |regex:/0[0-9]{9}/',
-                'email'=>'required|regex:/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/',	
-                'qulifications'=>'required| min:3|max:255',
-                
-                
-                
-               
-               
-                
-        ]);
+  //               'name'=>'required|min:3|max:255',
+  //               // 'nic'=>'required',
+  //               // 'address'=>'required|min:3|max:255',
+  //               // 'mobno'=>'required |regex:/0[0-9]{10}/',
+  //               // 'email'=>'required|regex:/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/',	
+  //               // 'qualifications'=>'required| min:3|max:255'     
+                          
+  //       ]);
 
-	$student = Student::create([
+	$lecturer = Lecturer::create([
             'name' => $request->name,
             'nic' => $request->nic,
             'address' => $request->address,
             'mobileNo' => $request->Mobile,
             'email' => $request->Email,
-            'qualification' => $request->qulifications,
-            'dob'=> $request->date
+            'qualification' => $request->qualifications,
+            'dob'=>  date("Y-m-d", strtotime($request->date))
             
         ]);
+	
 
 
-		// dd($requset->all());
+	// dd($request->all());
 
-			// return view ('Lecturer.lecturer_add');
+			return view ('lecturer/lecturer_add');
 	}
 
 
@@ -80,7 +76,7 @@ class LecturerController extends Controller
 	public function lecturerViewHome()
 
 	{
-		# code...
+		return view ('lecturer/lecturer_home');
 	}
 	
 
@@ -94,7 +90,10 @@ class LecturerController extends Controller
 	public function lecturerList()
 
 	{
-		# code...
+	 //MODEL list of lecturer
+       
+        $lecturer = Lecturer::all();//GETING ALL LIST FROM lecture TABLE
+        return view('lecturer.lecturer_list',['lecturer'=>$lecturer]);
 	}
 
 
@@ -104,10 +103,16 @@ class LecturerController extends Controller
      * @param  null
      * @return Response
      */
-	public function lecturerView()
+	public function lecturerView(Request $request)
 
 	{
-		# code...
+		
+		// $btnRqst = $request->view;
+		//show the lecturer details according to the relevant id
+        $lecturer = Lecturer::all()->find($request->id);
+        return view('lecturer.lecturer_view')->with(['lecturer'=>$lecturer]);
+        // 'btn'=> $btnRqst
+
 	}
 
 
@@ -124,16 +129,43 @@ class LecturerController extends Controller
 	}
 
 
+
+	/**
+     * Show the profile for the given user.
+     *
+     * @param  null
+     * @return Response
+     */
+	public function lecturerEdit(Request $request){
+
+        	$lecturer =Lecturer::all()->find($request ->id);
+			return view('lecturer.lecturer_update',compact('lecturer'));
+
+		}
 /**
      * Show the profile for the given user.
      *
      * @param  null
      * @return Response
      */
-	public function lecturerUpdate()
+	public function lecturerUpdate(Request $request){
 
-	{
-		# code...
+
+		
+		
+		$lecturer =Lecturer::all()->find($request ->id);
+			$lecturer->name = $request->name;
+            $lecturer->nic = $request->nic;
+            $lecturer->address = $request->address;
+            $lecturer->mobileNo = $request->Mobile;
+            $lecturer->email = $request->Email;
+            $lecturer->qualification = $request->qualifications;
+            $lecturer->dob= date("Y-m-d", strtotime($request->date));
+            $lecturer->save();
+
+
+            return redirect('lecturer/lecturer_list');
+		
 	}
 
 
@@ -144,9 +176,11 @@ class LecturerController extends Controller
      * @param  null
      * @return Response
      */
-	public function lecturerDelete()
+	public function lecturerDelete(Request $request)
 
 	{
-		# code...
+		$lecturer = Lecturer::find($request->id)->delete();
+
+		return redirect('lecturer/lecturer_list');
 	}
 }
