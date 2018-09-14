@@ -47,4 +47,5 @@ Route::get('/course/course_update/{id}', 'CourseController@courseEdit');
 Route::post('/course/course_update/{id}', 'CourseController@courseUpdate');
 Route::get('course/course_delete/{id}','CourseController@courseDelete');
 
-
+Route::get('/student/student_add','StudentController@studentAdd');
+Route::post('/student/student_add','StudentController@studentSave');
