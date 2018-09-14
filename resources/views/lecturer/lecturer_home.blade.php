@@ -5,7 +5,7 @@
 <section class="content">
 
  <div class="panel panel-default">
-  <div class="panel-heading">Lecture Home</div>
+  <div class="panel-heading">Lecturer Home</div>
     <div class="panel-body">
 
         <div class="row tile_count">

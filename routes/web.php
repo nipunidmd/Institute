@@ -19,10 +19,11 @@
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+// ROUTES FOR LECTURER
 Route::get('lecturer/lecturer_add','LecturerController@lecturerAdd');
 Route::post('lecturer/lecturer_add','LecturerController@lecturerSave');
 Route::get('lecturer/lecturer_home','LecturerController@lecturerViewHome');
@@ -33,21 +34,17 @@ Route::get('lecturer/lecturer_update/{id}','LecturerController@lecturerEdit');
 Route::post('lecturer/lecturer_update/{id}','LecturerController@lecturerUpdate');
 Route::get('lecturer/lecturer_delete/{id}','LecturerController@lecturerDelete');
 
+// ROUTES FOR ADMIN
 Route::get('admin/master','AdminController@view');
-
-// Route::get('admin/master','AdminController@view');
 Route::get('admin/dashboard','AdminController@view');
 
+// ROUTES FOR COURSE
 Route::get('course/course_add','CourseController@courseAdd');
 Route::post('course/course_add','CourseController@courseSave');
-
-Route::get('/course/course_list', 'CourseController@lists');
-
-Route::get('/course/course_show/{id}', 'CourseController@show');
-
-Route::get('/course/course_edit/{id}', 'CourseController@edit');
-Route::post('/course/course_edit/{id}', 'CourseController@updateStatus');
-
-Route::get('/course/delete/{id}', 'CourseController@destroy');
+Route::get('/course/course_list', 'CourseController@courseList');
+Route::get('/course/course_view/{id}', 'CourseController@courseView');
+Route::get('/course/course_update/{id}', 'CourseController@courseEdit');
+Route::post('/course/course_update/{id}', 'CourseController@courseUpdate');
+Route::get('course/course_delete/{id}','CourseController@courseDelete');
 
 

@@ -33,15 +33,15 @@
 				<br>
 
 			<label for ="" class="control-label"> Mobile No </label>
-				<input type="text" class="form-control" id="Mobile" name="Mobile" value="{{$lecturer->nic}}">
+				<input type="text" class="form-control" id="Mobile" name="Mobile" value="{{$lecturer->mobileNo}}">
             	<br>
 
 			<label for =""> Email </label>
 				<input type="text" class="form-control" id="Email" name="Email" value="{{$lecturer->email}}">
 				<br>
 
-			<label for ="" class="control-label"> Qulification  </label>
-				<input type="text" class="form-control" id="qulifications" name="qulifications" value="{{$lecturer->qualification}}">
+			<label for ="" class="control-label"> Qualification </label>
+				<input type="text" class="form-control" id="qualification" name="qualification" value="{{$lecturer->qualification}}">
 				<br>
 
 			<label for ="" class="control-label"> Date of Birth  </label>
@@ -54,8 +54,8 @@
 					</script>
 				<br>
 
-		<button type="submit" class="btn btn-primary"> Submit</button>
-		<a href="http://localhost/Institute/public/lecturer/lecturer_list" class="btn btn-primary pull-right">List</a>
+		<button type="submit" class="btn btn-primary pull-right"> Submit</button>
+		<a href="http://localhost:8080/Institute/public/lecturer/lecturer_list" class="btn btn-primary pull-right">List</a>
 		<button type="cancel" class="btn btn-primary" onClick="history.back()">Back</button>
 	</div>
 	</form>

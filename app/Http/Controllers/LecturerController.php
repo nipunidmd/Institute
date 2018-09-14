@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\Lecturer;
+use App\Models\Lecturer;
 
 /**
  * 
@@ -138,6 +138,7 @@ class LecturerController extends Controller
      */
 	public function lecturerEdit(Request $request){
 
+
         	$lecturer =Lecturer::all()->find($request ->id);
 			return view('lecturer.lecturer_update',compact('lecturer'));
 
@@ -151,7 +152,7 @@ class LecturerController extends Controller
 	public function lecturerUpdate(Request $request){
 
 
-		
+		// return $request->all();
 		
 		$lecturer =Lecturer::all()->find($request ->id);
 			$lecturer->name = $request->name;

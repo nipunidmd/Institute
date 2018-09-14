@@ -1,11 +1,30 @@
+
 @extends('admin.master')
 
-
 @section('content')
-<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3">
-      <form method="POST" role="form">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <div class="row">
+
+<section class="content">
+
+<body>
+
+
+<!-- page content -->
+
+
+        <div class="title_center" role="main">
+          
+            <div class="page-title">
+             <div class="title_center">
+                <div class="col-md-6 col-sm-6 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    
+                  </div><!--End of input group-->
+                </div><!--End of col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search-->
+              </div><!--End of title right-->
+            </div><!--End of page title-->
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Course Registration<small>Add new course</small></h2>
@@ -36,7 +55,7 @@
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="NVQ level">NVQ Level</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <!-- <input type="text" id="nvq_level" class="form-control col-md-7 col-xs-12" name="nvq_level"> -->
-                          <select class="form-control col-md-7 col-xs-12" name="nvq_level">
+                          <select class="form-control col-md-6 col-sm-6 col-xs-12 name="nvq_level">
                           <option value="Level 1">Level 1</option>
                           <option value="Level 2">Level 2</option>
                           <option value="Level 3">Level 3</option>
@@ -62,9 +81,9 @@
                             @for($i=0;$i < 5;$i++)
                               <tr class="active">
                                 <td class="text-center last">
-                                  <input type="text" name="mname[]">
+                                  <input type="text" class="form-control col-md-7 col-xs-12" name="mname[]">
                                 <td>
-                                <input type="text" name="content[]">
+                                <input type="text" class="form-control col-md-7 col-xs-12" name="content[]">
                                 </td>
                                <td>
                                 <select class="form-control" name='lecturer[]'>          
@@ -78,50 +97,21 @@
                           </tbody>
                         </table>
 
-                          <!-- <div class="form-group">
-                          <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="mname">Name</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="nvq_level" class="form-control col-md-7 col-xs-12" name="mname">
-                        </div>
-                        <br>
-                        <br>
-                        <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Content</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="nvq_level" class="form-control col-md-7 col-xs-12" name="content">
-                        </div>
-                      </div>
-                      <br>
-                      <br>
-                      <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Lecturer</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select class="form-control" name='lecturer'>          
-                                   @foreach($lecturers as $key => $lecturer)
-                                  <option value="{{ $lecturer->id}}">{{ $lecturer->name}} </option>
-                                  @endforeach
-                          </select>
-                        </div>
-                      </div>
-                      <br>
-                      <br> -->
-                    
-
+                         
                       <div class="ln_solid"></div>
                       <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button" onClick="history.back()">Cancel</button>
-						              <button class="btn btn-primary" type="reset">Reset</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
+                      
+ 
+           <button type="submit" class="btn btn-primary pull-right">Submit</button>
+          <a href="http://localhost:8080/Institute/public/course/course_list" class="btn btn-primary pull-right">List</a>
+                        </form>
                         </div>
                       </div>
-                    </form>
-                    </div>
                 </div>
-              </form>
-                
               </div>
             </div>
-            </div>
+</div><!--End of class-->
+</body>
+</section>
 
 @stop

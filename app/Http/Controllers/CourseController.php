@@ -72,7 +72,7 @@ class CourseController extends Controller
     }
 
          
-     public function lists(){
+     public function courseList(){
 
         //MODEL please give me list of students
        
@@ -88,10 +88,10 @@ class CourseController extends Controller
      * @param  Request
      * @return course.show.blade.php view 
      */
-    public function show(Request $request)
+    public function courseView(Request $request)
     {
         $course = Course::find($request->id);
-        return view('course.course_show')->with(['course' => $course]);;
+        return view('course.course_view')->with(['course' => $course]);;
     }
 
      /**
@@ -100,10 +100,10 @@ class CourseController extends Controller
      * @param  Request
      * @return course.edit.blade.php view 
      */
-    public function edit(Request $request)
+    public function courseEdit(Request $request)
     {
         $course = Course::find($request->id);
-        return view('course.course_edit')->with(['course' => $course]);
+        return view('course.course_edit',compact('course'));
 
     }
 
@@ -114,7 +114,7 @@ class CourseController extends Controller
      * @param  Request
      * @return course.lists.blade.php view 
      */
-    public function updateStatus(Request $request)
+    public function courseUpdate(Request $request)
     {
         $course = Course::find($request->id);
         $course->name=$request->name;
@@ -131,7 +131,7 @@ class CourseController extends Controller
      * @param  Request
      * @return student.lists.blade.php view 
      */
-    public function destroy(Request $request) 
+    public function courseDelete(Request $request) 
     {
         $course = Course::find($request->id)->delete();
         

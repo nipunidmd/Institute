@@ -156,7 +156,7 @@
                       <br> 
 
           <button type="submit" class="btn btn-primary pull-right">Submit</button>
-          <a href="http://localhost/Institute/public/lecturer/lecturer_list" class="btn btn-primary pull-right">List</a>
+          <a href="http://localhost:8080/Institute/public/lecturer/lecturer_list" class="btn btn-primary pull-right">List</a>
 
                         </form>
                         </div>

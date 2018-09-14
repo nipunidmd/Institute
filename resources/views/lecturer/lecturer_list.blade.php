@@ -27,7 +27,7 @@
 					<th>Mobile Number</th>
 					<th>Email</th>
 					<th>Qualification</th>
-					
+					<th>Actions</th>
 				</tr>
 			</thead>
 
@@ -43,9 +43,11 @@
 					<td>{{$lecturer->email}}</td>
 					<td>{{$lecturer->qualification}}</td>
 					<!-- <td>{{$lecturer->dob}}</td> -->
-					<td><a class="edit-modal btn btn-info" href="{{url('lecturer/		lecturer_update')}}/{{$lecturer->id}}"><i class="glyphicon glyphicon-edit"></i></a>
+					<td>
+						<a href="{{url('lecturer/lecturer_view')}}/{{$lecturer->id}}" class="btn-primary btn"><i class="fa fa-eye"></i></a>
+						<a class="edit-modal btn btn-info" href="{{url('lecturer/		lecturer_update')}}/{{$lecturer->id}}"><i class="glyphicon glyphicon-edit"></i></a>
         			<a class="btn btn-round btn-danger" onclick="return confirm('Are you sure?')" href="{{url('lecturer/lecturer_delete')}}/{{$lecturer->id}}"><i class="fa fa-trash"></i></a>		
-					 <a href="{{url('lecturer/lecturer_view')}}/{{$lecturer->id}}" class="btn-primary btn-xs"><i class="fa fa-folder"></i></a>
+					 
 					</td>
 				</tr>
 		@endforeach
