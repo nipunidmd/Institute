@@ -1,3 +1,4 @@
+<!-- ?cfggdfb -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -71,7 +72,7 @@
             <!-- /menu footer buttons -->
           </div>
         </div>
-
+        
         <!-- top navigation -->
         @include('admin.includes.top_nav')
         <!-- /top navigation -->
