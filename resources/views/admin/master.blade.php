@@ -67,7 +67,7 @@
             <!-- /menu footer buttons -->
           </div>
         </div>
-
+        
         <!-- top navigation -->
         @include('admin.includes.top_nav')
         <!-- /top navigation -->

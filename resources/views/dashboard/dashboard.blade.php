@@ -2,11 +2,11 @@
 
 
 
-@section('css')
 
-@stop
 
 @section('content')
+
+	
 
 
 
