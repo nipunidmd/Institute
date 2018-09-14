@@ -15,7 +15,7 @@
 //      return view('welcome');
 // });
 
-<<<<<<< HEAD
+
 // Route::get('admin/master','AdminController@view');
 Route::get('admin/dashboard','AdminController@view');
 
@@ -30,7 +30,7 @@ Route::get('/course/course_edit/{id}', 'CourseController@edit');
 Route::post('/course/course_edit/{id}', 'CourseController@updateStatus');
 
 Route::get('/course/delete/{id}', 'CourseController@destroy');
-=======
+
 Route::get('admin/studentlist','AdminController@view');
 
 Route::get('admin/viewedit', 'AdminController@viewedit');
@@ -45,8 +45,16 @@ Route::get('student/searchstudent', 'AdminController@search')->name('student.sea
 
 
 
+// ROUTES FOR COURSE
+Route::get('course/course_add','CourseController@courseAdd');
+Route::post('course/course_add','CourseController@courseSave');
+Route::get('/course/course_list', 'CourseController@courseList');
+Route::get('/course/course_view/{id}', 'CourseController@courseView');
+Route::get('/course/course_update/{id}', 'CourseController@courseEdit');
+Route::post('/course/course_update/{id}', 'CourseController@courseUpdate');
+Route::get('course/course_delete/{id}','CourseController@courseDelete');
 
-
-
->>>>>>> Student view list with course information has been implemenyted
+//Route::get('/student/student_add','StudentController@studentAdd');
+//Route::post('/student/student_add','StudentController@studentSave');
+//ttttttt
 
