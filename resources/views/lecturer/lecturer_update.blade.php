@@ -40,8 +40,10 @@
 				<input type="text" class="form-control" id="Email" name="Email" value="{{$lecturer->email}}">
 				<br>
 
+
 			<label for ="" class="control-label"> Qualification </label>
 				<input type="text" class="form-control" id="qualification" name="qualification" value="{{$lecturer->qualification}}">
+
 				<br>
 
 			<label for ="" class="control-label"> Date of Birth  </label>
@@ -55,8 +57,10 @@
 				<br>
 
 		<button type="submit" class="btn btn-primary pull-right"> Submit</button>
+
 		<a href="http://localhost:8080/Institute/public/lecturer/lecturer_list" class="btn btn-primary pull-right">List</a>
 		<button type="cancel" class="btn btn-primary" onClick="history.back()">Back</button>
+
 	</div>
 	</form>
  

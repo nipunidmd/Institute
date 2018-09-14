@@ -14,9 +14,15 @@
 		<div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
+
                     <input type="text" class="form-control" id="search" name="search" placeholder="Search for...">
                     <span class="input-group-btn">
                     <button class="btn btn-default" type="button" onclick = "{{route('student.search')}}">Go!</button>>
+
+                    <input type="text" class="form-control" placeholder="Search...">
+                     <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Search</button>
+
                     </span>
              
                   </div><!--End of title-right-->
@@ -46,11 +52,12 @@
 					<td>{{$lecturer->email}}</td>
 					<td>{{$lecturer->qualification}}</td>
 					<!-- <td>{{$lecturer->dob}}</td> -->
+
 					<td>
 						<a href="{{url('lecturer/lecturer_view')}}/{{$lecturer->id}}" class="btn-primary btn"><i class="fa fa-eye"></i></a>
 						<a class="edit-modal btn btn-info" href="{{url('lecturer/		lecturer_update')}}/{{$lecturer->id}}"><i class="glyphicon glyphicon-edit"></i></a>
         			<a class="btn btn-round btn-danger" onclick="return confirm('Are you sure?')" href="{{url('lecturer/lecturer_delete')}}/{{$lecturer->id}}"><i class="fa fa-trash"></i></a>		
-					 
+
 					</td>
 				</tr>
 		@endforeach
