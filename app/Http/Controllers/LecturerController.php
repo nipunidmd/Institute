@@ -61,9 +61,9 @@ class LecturerController extends Controller
 	
 
 
-	// dd($request->all());
+            //return ($request->all());
 
-			return view ('lecturer/lecturer_add');
+			 return view ('lecturer.lecturer_add');
 	}
 
 

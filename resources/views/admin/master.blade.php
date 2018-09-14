@@ -75,7 +75,7 @@
         <!-- /top navigation -->
 
        <!-- page content -->
-        <div class="right_col" role="main">
+        <div class="right_col" role="main" style="padding-bottom: 200px;">
          @yield('content')
         </div>
         <!-- /page content -->
