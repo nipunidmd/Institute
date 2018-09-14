@@ -1,30 +1,19 @@
+
 @extends('admin.master')
-
-
-
-@section('css')
-	<!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
-
-@stop
 
 @section('content')
 
-<script>
-  
- </script>
+<section class="content">
 
-<div class="col-md-20 col-sm-20 col-xs-20">
-                <div class="x_panel">
-                  <div class="x_title">
-<h1 class="text-center">Course List</h1>
+ <div class="panel panel-default">
+ 	<div class="panel-heading">Course List</div>
+    <div class="panel-body">
+
+
+    <table class="table table-bordered">
+		<div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+
  <form method="POST" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
 <div class="form-group">
 
@@ -45,6 +34,7 @@
 					<th>Name</th>
 					<th>Description</th>
 					<th>NVQ Level</th>
+					<th>Actions</th>
 					<!-- <th>Modules</th> -->
 					
 					
@@ -59,9 +49,11 @@
     			<td>{{$course->nvq_level}}</td>
     			<!-- <td>{{$course->Modules}}</td> -->
 
-    <td><a class="edit-modal btn btn-info" href="{{url('course/course_show'.$course->id)}}">
-        <i class="glyphicon glyphicon-edit"></i></a>
+    	<td>
+    		<a href="{{url('course/course_view')}}/{{$course->id}}" class="btn-primary btn"><i class="fa fa-eye"></i></a>
+    		<a class="edit-modal btn btn-info" href="{{url('course/course_update')}}/{{$course->id}}"><i class="glyphicon glyphicon-edit"></i></a>
         <a class="btn btn-round btn-danger" onclick="return confirm('Are you sure?')" href="{{url('course/course_delete')}}/{{$course->id}}"><i class="fa fa-trash"></i></a>
+         
     </td>
     </tr>
 
@@ -70,7 +62,7 @@
 		</table>
 		</div>
 		
-		<button type="button" class="btn btn-primary pull-right" onClick="history.back()">Back</button>
+		<button type="button" class="btn btn-primary pull-left" onClick="history.back()">Back</button>
 	</form>
 </div>
 </div>

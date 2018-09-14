@@ -9,6 +9,7 @@ class Course extends Model
 
 	//INSTITUTE TABLE
     protected $guarded = ['id'];
+    protected $dates = ['deleted_at'];
 
 	protected $table = 'course';
 

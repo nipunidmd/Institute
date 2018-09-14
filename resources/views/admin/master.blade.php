@@ -7,19 +7,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+    <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
     <title>IMS</title>
 
     <!-- Bootstrap -->
     <link href="{{asset('/assets/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
+
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
+
     <!-- Font Awesome -->
     <link href="{{asset('/assets/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
     <!-- NProgress -->
     <link href="{{asset('/assets/nprogress/nprogress.css')}}" rel="stylesheet">
     <!-- iCheck -->
     <link href="{{asset('/assets/iCheck/skins/flat/green.css')}}" rel="stylesheet">
-	    <!-- bootstrap-progressbar -->
+        <!-- bootstrap-progressbar -->
     <link href="{{asset('/assets/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet">
     <!-- JQVMap -->
     <link href="{{asset('/assets/jqvmap/dist/jqvmap.min.css')}}" rel="stylesheet"/>
@@ -73,8 +78,12 @@
         <!-- /top navigation -->
 
        <!-- page content -->
-        <div class="right_col" role="main">
+
+        <div class="right_col" role="main" style="padding-bottom: 200px;">
+
+   
           
+
          @yield('content')
          
         </div>
@@ -137,6 +146,6 @@
 
     <!-- Custom Theme Scripts -->
     <script src="{{asset('/admin_template/custom.min.js')}}"></script>
-	
+    
   </body>
 </html>
