@@ -17,7 +17,7 @@ class StudentController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function view()
+    public function studentView()
     {  //Get the list of students from the database table
         //$students = Student::all();      
         $students = Student::with(['student_course'])->get();                 

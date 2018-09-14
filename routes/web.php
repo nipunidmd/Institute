@@ -18,32 +18,13 @@
 
 // Route::get('admin/master','AdminController@view');
 Route::get('admin/dashboard','AdminController@view');
-
-Route::get('course/course_add','CourseController@courseAdd');
-Route::post('course/course_add','CourseController@courseSave');
-
-Route::get('/course/course_list', 'CourseController@lists');
-
-Route::get('/course/course_show/{id}', 'CourseController@show');
-
-Route::get('/course/course_edit/{id}', 'CourseController@edit');
-Route::post('/course/course_edit/{id}', 'CourseController@updateStatus');
-
-Route::get('/course/delete/{id}', 'CourseController@destroy');
-
-Route::get('admin/studentlist','AdminController@view');
-
+Route::get('admin/studentlist','StudentController@studentView');
 Route::get('admin/viewedit', 'AdminController@viewedit');
-
-Route::get('/student/delete/{id}','AdminController@destroy');
-
 Route::get('admin/editstudent/{id}', 'AdminController@edit');
 
+Route::get('/student/delete/{id}','AdminController@destroy');
 Route::post('student/updatestudent', 'AdminController@update')->name('student.update');
-
 Route::get('student/searchstudent', 'AdminController@search')->name('student.search');
-
-
 
 // ROUTES FOR COURSE
 Route::get('course/course_add','CourseController@courseAdd');
@@ -54,7 +35,7 @@ Route::get('/course/course_update/{id}', 'CourseController@courseEdit');
 Route::post('/course/course_update/{id}', 'CourseController@courseUpdate');
 Route::get('course/course_delete/{id}','CourseController@courseDelete');
 
-//Route::get('/student/student_add','StudentController@studentAdd');
-//Route::post('/student/student_add','StudentController@studentSave');
-//ttttttt
+Route::get('/student/student_add','StudentController@studentAdd');
+Route::post('/student/student_add','StudentController@studentSave');
+
 
