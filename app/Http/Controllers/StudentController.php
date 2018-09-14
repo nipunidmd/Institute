@@ -158,7 +158,7 @@ class StudentController extends Controller
 
 //         return view('admin.dashboard');
 
-}
+//}
     
 }
 

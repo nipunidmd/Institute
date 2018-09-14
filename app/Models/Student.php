@@ -15,10 +15,11 @@ class Student extends Model
 
 	protected $table = 'student';
 
-	public function inst()
+		public function student_course()
 	{
-		return $this->belongsTo('App\Models\Course','course_id','id'); 
-	}
+		//if you belongs ton1 param is forrign key 2nd primary key
 
+		return $this->belongsTo('App\Model\Course','course_id', 'id');
+	}
 }
 
