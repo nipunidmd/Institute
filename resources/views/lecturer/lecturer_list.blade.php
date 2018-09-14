@@ -2,7 +2,7 @@
 @extends('admin.master')
 
 @section('content')
-
+<!--c-->
 <section class="content">
 
  <div class="panel panel-default">
