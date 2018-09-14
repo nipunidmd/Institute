@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>Gentelella Alela! | </title>
+    <title>IMS</title>
 
     <!-- Bootstrap -->
     <link href="{{asset('/assets/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
 
+
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+
 
     <!-- Font Awesome -->
     <link href="{{asset('/assets/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
@@ -41,7 +43,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-graduation-cap"></i> <span>IMS</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -49,11 +51,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="{{ asset('/assets/images/img.jpg')}}" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h2>Tharindu Pathirana</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -75,8 +77,14 @@
         <!-- /top navigation -->
 
        <!-- page content -->
+
         <div class="right_col" role="main" style="padding-bottom: 200px;">
+
+   
+          
+
          @yield('content')
+         
         </div>
         <!-- /page content -->
 
@@ -85,7 +93,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            Institute Management System by <a href="https://colorlib.com">Colorlib</a>
           </div>
           <div class="clearfix"></div>
         </footer>
