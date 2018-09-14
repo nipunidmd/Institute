@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
-{	//tttt
+{	
 	//STUDENT TABLE
 	use SoftDeletes;
 
@@ -19,7 +19,7 @@ class Student extends Model
 	{
 		//if you belongs ton1 param is forrign key 2nd primary key
 
-		return $this->belongsTo('App\Model\Course','course_id', 'id');
+		return $this->belongsTo('App\Models\Course','course_id', 'id');
 	}
 }
 

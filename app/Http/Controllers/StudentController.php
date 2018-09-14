@@ -9,7 +9,7 @@ use App\Models\Student;
 use App\Models\Course;
 
 class StudentController extends Controller
-{//ttttttttt
+{
     /**
      * Show student registration to admin.
      *
@@ -61,21 +61,7 @@ class StudentController extends Controller
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     public function studentView()
+    public function studentView()
     {  //Get the list of students from the database table
         //$students = Student::all();      
         $students = Student::with(['student_course'])->get();                 
