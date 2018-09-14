@@ -9,7 +9,7 @@ use App\Models\Student;
 use App\Models\Course;
 
 class StudentController extends Controller
-{
+{//ttttttttt
     /**
      * Show student registration to admin.
      *

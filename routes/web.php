@@ -49,3 +49,4 @@ Route::get('course/course_delete/{id}','CourseController@courseDelete');
 
 Route::get('/student/student_add','StudentController@studentAdd');
 Route::post('/student/student_add','StudentController@studentSave');
+//ttttttt
