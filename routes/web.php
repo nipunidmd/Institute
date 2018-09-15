@@ -11,14 +11,6 @@
 |
 */
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
-
-
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -61,4 +53,9 @@ Route::get('course/course_delete/{id}','CourseController@courseDelete');
 Route::get('/student/student_add','StudentController@studentAdd');
 Route::post('/student/student_add','StudentController@studentSave');
 
+//ROUTES FOR CREATE LOGINS
+Route::get('/login/createstulogin','LoginController@createStuLogin');
+Route::post('/login/createstulogin','LoginController@saveStuLogin');
+Route::get('/login/createleclogin','LoginController@createLecLogin');
+Route::post('/login/createleclogin','LoginController@saveLecLogin');
 
