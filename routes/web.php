@@ -50,8 +50,10 @@ Route::get('/course/course_update/{id}', 'CourseController@courseEdit');
 Route::post('/course/course_update/{id}', 'CourseController@courseUpdate');
 Route::get('course/course_delete/{id}','CourseController@courseDelete');
 
+// ROUTES FOR STUDENT
 Route::get('/student/student_add','StudentController@studentAdd');
 Route::post('/student/student_add','StudentController@studentSave');
+
 
 //ROUTES FOR CREATE LOGINS
 Route::get('/login/createstulogin','LoginController@createStuLogin');
@@ -59,3 +61,9 @@ Route::post('/login/createstulogin','LoginController@saveStuLogin');
 Route::get('/login/createleclogin','LoginController@createLecLogin');
 Route::post('/login/createleclogin','LoginController@saveLecLogin');
 
+Route::get('student/student_list','StudentController@studentView');
+Route::get('student/viewedit', 'StudentController@viewedit');
+Route::get('student/editstudent/{id}', 'StudentController@edit');
+Route::get('/student/delete/{id}','StudentController@destroy');
+Route::post('student/update_student', 'StudentController@update')->name('student.update');
+Route::get('student/searchstudent', 'StudentController@search')->name('student.search');

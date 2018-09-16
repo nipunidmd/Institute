@@ -1,6 +1,7 @@
 
 @extends('admin.master')
 
+
 @section('content')
 
 <section class="content">
@@ -27,13 +28,24 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Course Registration<small>Add new course</small></h2>
-                    
+                    <h2>Course Registration</h2>
+                    <ul class="nav navbar-center panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
                     <div class="clearfix"></div>
-                  </div>
+                  </div><!--End of X-title-->
                   <div class="x_content">
+                    <br>
+                    <form id="demo-form2" method = "POST" role= "form" data-parsley-validate class="form-horizontal form-label-left">
+                        <input type="hidden" name="_token" value = "{{csrf_token() }}">
                     
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-center">
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Course Name <span class="required">*</span>
@@ -55,7 +67,7 @@
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="NVQ level">NVQ Level</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <!-- <input type="text" id="nvq_level" class="form-control col-md-7 col-xs-12" name="nvq_level"> -->
-                          <select class="form-control col-md-6 col-sm-6 col-xs-12 name="nvq_level">
+                          <select class="form-control col-md-6 col-sm-6 col-xs-12" name="nvq_level">
                           <option value="Level 1">Level 1</option>
                           <option value="Level 2">Level 2</option>
                           <option value="Level 3">Level 3</option>

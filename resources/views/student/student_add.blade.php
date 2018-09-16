@@ -1,27 +1,50 @@
+
 @extends('admin.master')
 
 
-
-@section('css')
-
-@stop
-
 @section('content')
 
-<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3">
-      <form method="POST" role="form">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <div class="row">
+<section class="content">
+
+<body>
+
+
+<!-- page content -->
+
+
+        <div class="title_center" role="main">
+          
+            <div class="page-title">
+             <div class="title_center">
+                <div class="col-md-6 col-sm-6 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    
+                  </div><!--End of input group-->
+                </div><!--End of col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search-->
+              </div><!--End of title right-->
+            </div><!--End of page title-->
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Student Registration<small>Add new student</small></h2>
-                    
+                    <h2>Student Registration</h2>
+                    <ul class="nav navbar-center panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
                     <div class="clearfix"></div>
-                  </div>
+                  </div><!--End of X-title-->
                   <div class="x_content">
-                    <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
+                    <br>
+                    <form id="demo-form2" method = "POST" role= "form" data-parsley-validate class="form-horizontal form-label-left">
+                        <input type="hidden" name="_token" value = "{{csrf_token() }}">
 				
 		
 		
@@ -117,10 +140,8 @@
 			
 			<div class="ln_solid"></div>
                       <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button" onClick="history.back()">Cancel</button>
-						              <button class="btn btn-primary" type="reset">Reset</button>
-                          <button type="submit" class="btn btn-success">Submit</button>
+                         <button type="submit" class="btn btn-primary pull-right">Submit</button>
+          				<a href="http://localhost:8080/Institute/public/lecturer/lecturer_list" class="btn btn-primary pull-right">List</a>
                         </div>
                       </div>
 			
@@ -131,5 +152,5 @@
                 </div>
               </div>
             </div>
-//ttttt
+
 @stop
