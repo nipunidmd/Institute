@@ -31,15 +31,7 @@ Route::get('admin/master','AdminController@view');
 Route::get('admin/dashboard','AdminController@view');
 
 
-// Route::get('admin/master','AdminController@view');
-Route::get('admin/dashboard','AdminController@view');
-Route::get('admin/studentlist','StudentController@studentView');
-Route::get('admin/viewedit', 'AdminController@viewedit');
-Route::get('admin/editstudent/{id}', 'AdminController@edit');
 
-Route::get('/student/delete/{id}','AdminController@destroy');
-Route::post('student/updatestudent', 'AdminController@update')->name('student.update');
-Route::get('student/searchstudent', 'AdminController@search')->name('student.search');
 
 // ROUTES FOR COURSE
 Route::get('course/course_add','CourseController@courseAdd');
