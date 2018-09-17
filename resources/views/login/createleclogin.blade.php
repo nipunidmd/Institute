@@ -5,7 +5,7 @@
 
 @section('content')
 
-<
+
 <div class="title_center" role="main">
           
     <div class="page-title">
