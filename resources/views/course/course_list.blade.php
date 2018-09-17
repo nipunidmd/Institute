@@ -10,10 +10,6 @@
     <div class="panel-body">
 
 
-    <table class="table table-bordered">
-		<div class="title_right">
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-
  <form method="POST" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
 <div class="form-group">
 
@@ -21,10 +17,11 @@
 		<div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
+                    <input type="text" class="form-control" id="search" name="search" placeholder="Search for...">
                     <span class="input-group-btn">
-                      
+                    <button class="btn btn-default" type="button" onclick = "{{route('student.search')}}">Go!</button>>
                     </span>
+                   
                   </div>
                 </div>
               </div>

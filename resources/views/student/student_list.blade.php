@@ -34,14 +34,18 @@
   
  </script>
 
-<div class="col-md-20 col-sm-20 col-xs-20">
-                <div class="x_panel">
-                  <div class="x_title">
-<h1 class="text-center">Student List</h1>
- <form method="POST" action="{{ route('student.update') }}" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+<section class="content">
+
+ <div class="panel panel-default">
+ 	<div class="panel-heading">Student List</div>
+    <div class="panel-body">
+
+
+ <form method="POST" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
 <div class="form-group">
 
-	<table class="table table-bordered">
+
+    <table class="table table-bordered">
 		<div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
@@ -49,10 +53,11 @@
                     <span class="input-group-btn">
                     <button class="btn btn-default" type="button" onclick = "{{route('student.search')}}">Go!</button>>
                     </span>
-                  </div>
-                </div>
-              </div>
-			<thead>
+             
+                  </div><!--End of title-right-->
+                </div><!--End of col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search-->
+              </div><!--End of nput-group-->
+ 
 				<tr>
 					<th>ID</th>
 					<th>Name</th>
@@ -60,9 +65,10 @@
 					<th>Address</th>
 					<th>School</th>
 					<th>NIC</th>
-					<th>Telephone No</th>
+					<th>Mobile No</th>
 					<th>E-mail</th>
 					<th>Course Name</th>
+					<th>Actions</th>
 					
 									
 				</tr>				
@@ -79,10 +85,12 @@
     <td>{{$student->telno}}</td>
     <td>{{$student->email}}</td>
     <td>{{$student->student_course->name }}</td>
-    <td><a class="btn btn-dark" href="{{url('admin/editstudent/'.$student->id)}}">
-        <i class="glyphicon glyphicon-edit "></i></a>
-        <a class="btn btn-dark" onclick="return confirm('Are you sure?')" href="{{url('student/delete')}}/{{$student->id}}"><i class="fa fa-trash"></i></a>
-    </td>
+    <td><a  class="btn-primary btn"  href="{{url('student/update_student')}}/{{$student->id}}"><i class="fa fa-eye"></i></a>
+    	<a class="edit-modal btn btn-info" href="{{url('admin/editstudent/'.$student->id)}}"><i class="glyphicon glyphicon-edit "></i></a>
+        <a class="btn btn-round btn-danger" onclick="return confirm('Are you sure?')" href="{{url('student/delete')}}/{{$student->id}}"><i class="fa fa-trash"></i></a>
+
+
+        		
     </tr>
 
 		@endforeach

@@ -49,9 +49,9 @@
 		
 		
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Name:</label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Name<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-				<input type="text" class="form-control" pattern="[A-Za-z]+" id="name" name="name" required>
+				<input type="text" class="form-control" pattern="[A-Za-z]+" required="required" id="name" name="name" required>
 			</div>
 				@if($errors->has('name'))
                 		<span class="help-block">{{$errors->first('name')}}</span>
@@ -61,7 +61,7 @@
                       <br>
 
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Date of birth:</label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Date of birth<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				<input type="date" class="form-control" id="dob" name="dob" required></div>
 				@if($errors->has('dob'))
@@ -72,7 +72,7 @@
                       <br>
 
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Address:</label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Address<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				<input type="text" class="form-control" id="address" name="address"  required></div>
 				@if($errors->has('address'))
@@ -83,7 +83,7 @@
                       <br>
 
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">School:</label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">School<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				<input type="text" class="form-control" id="school" name="school" required></div>
 				@if($errors->has('school'))
@@ -91,10 +91,10 @@
                 @endif
 			</div>
 			 <br>
-                      <br>
+             <br>
 
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">NIC:</label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">NIC<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				<input type="text" class="form-control" id="nic" name="nic" maxlength=12 pattern="[v0-9]+" required></div>
 				@if($errors->has('nic'))
@@ -102,10 +102,10 @@
                 @endif
 			</div>
 			 <br>
-                      <br>
+             <br>
 
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Mobile No:</label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Mobile No<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				<input type="number" class="form-control" id="mobno" name="telno" required></div>
 				@if($errors->has('telno'))
@@ -113,10 +113,10 @@
                 @endif
 			</div>
 			 <br>
-                      <br>
+             <br>
 
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Email:</label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Email<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				<input type="text" class="form-control" id="email" name="email" required></div>
 				@if($errors->has('email'))
@@ -124,10 +124,10 @@
                 @endif
 			</div>
 			 <br>
-                      <br>
+             <br>
 
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Course:</label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Course<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				<select class="form-control" name='course'>					
 					@foreach($courses as $key => $course)
@@ -141,7 +141,7 @@
 			<div class="ln_solid"></div>
                       <div class="form-group">
                          <button type="submit" class="btn btn-primary pull-right">Submit</button>
-          				<a href="http://localhost:8080/Institute/public/lecturer/lecturer_list" class="btn btn-primary pull-right">List</a>
+          				<a href="http://localhost:8080/Institute/public/student/student_list" class="btn btn-primary pull-right">List</a>
                         </div>
                       </div>
 			

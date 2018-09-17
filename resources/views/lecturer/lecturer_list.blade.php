@@ -6,7 +6,7 @@
 <section class="content">
 
  <div class="panel panel-default">
- 	<div class="panel-heading">Lecture List</div>
+ 	<div class="panel-heading">Lecturer List</div>
     <div class="panel-body">
 
 
@@ -14,7 +14,10 @@
 		<div class="title_right">
                 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
+                    <input type="text" class="form-control" id="search" name="search" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" onclick = "{{route('student.search')}}">Go!</button>>
+                    </span>
              
                   </div><!--End of title-right-->
                 </div><!--End of col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search-->
@@ -22,9 +25,9 @@
  
 			<thead>
 				<tr>
-					<th width="5%">Registration Number</th>
+					<th width="5%">ID</th>
 					<th>Name</th>
-					<th>Mobile Number</th>
+					<th>Mobile No</th>
 					<th>Email</th>
 					<th>Qualification</th>
 					<th>Actions</th>
