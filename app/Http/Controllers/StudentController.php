@@ -63,7 +63,8 @@ class StudentController extends Controller
 
     public function studentView()
     {  //Get the list of students from the database table
-        //$students = Student::all();      
+        // $students = Student::all();
+        
         $students = Student::with(['student_course'])->get();                 
         return view('student.student_list',compact('students')); 
     }
@@ -72,7 +73,7 @@ class StudentController extends Controller
     public function destroy(Request $request) 
     {
         $student = Student::find($request->id)->delete();
-        return redirect('admin/studentlist');
+        return redirect('/student/student_list');
     }
 
     public function viewedit()
@@ -106,7 +107,7 @@ class StudentController extends Controller
         $student ->course_id = $request ->course_id;        
         $student ->save();
 
-        return redirect('admin/studentlist');
+        return redirect('/student/student_list');
     }
 
     // public function search(Request $request){
@@ -114,45 +115,35 @@ class StudentController extends Controller
     //     return view('student.student_list', compact('student'));
     // }
 
-    //  public function search(Request $request)
-    //  {
-    //     $student = DB::table('Student')->where('name','LIKE','%', $request '%')->get();
-
-    //     if($customers){
-    //      foreach($students as $key =>$student){
-    //        $output.='<tr>'
-    //                 '<td>'.$student->id.'</td>'.
-    //                 '<td>'.$student->name.'</td>'.
-    //                 '<td>'.$student->dob.'</td>'.
-    //                 '<td>'.$student->address.'</td>'.
-    //                 '<td>'.$student->school.'</td>'.
-    //                 '<td>'.$student->nic.'</td>'.
-    //                 '<td>'.$student->telno.'</td>'.
-    //                 '<td>'.$student->email.'</td>'.
-    //                 '<td>'.$student->course_id.'</td>'.
-    //                 '</tr>';
-
-    //      }
-    //      return Response ($output);
-    //  }
-    //  }
-
-
-// }
+     public function search(Request $request)
+     {
+        
+        $student = DB::table('Student')->where('name','LIKE','%', $request '%')->get();         
+         foreach($students as $key =>$student){
+           $output.='<tr>'
+                    '<td>'.$student->id.'</td>'.
+                    '<td>'.$student->name.'</td>'.
+                    '<td>'.$student->dob.'</td>'.
+                    '<td>'.$student->address.'</td>'.
+                    '<td>'.$student->school.'</td>'.
+                    '<td>'.$student->nic.'</td>'.
+                    '<td>'.$student->telno.'</td>'.
+                    '<td>'.$student->email.'</td>'.
+                    '<td>'.$student->course_id.'</td>'.
+                    '</tr>';
+         }
+         return Response ($output);
+     
+     // }
+     }
 
 
-//         return view('admin.dashboard');
-
-//}
-    
-}
+         
+ }
 
 
     
  
-// }
-//         return view('admin.dashboard');
-//}
-    
-}
+
+
 
