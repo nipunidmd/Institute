@@ -18,7 +18,7 @@ class LoginController extends Controller
      * Show create student login view to admin.
      *
      * @param  null
-     * @return login/createstulogin.blade.php
+     * @return login.createstulogin.blade.php
      */
     public function createStuLogin()
     {
@@ -30,7 +30,7 @@ class LoginController extends Controller
      * Save the student login.
      *
      * @param  Request
-     * @return Response
+     * @return login.createstulogin.blade.php
      */
     public function saveStuLogin(Request $request)
     { 
@@ -55,7 +55,7 @@ class LoginController extends Controller
      * Show create lecturer login view to admin.
      *
      * @param  null
-     * @return login/createleclogin.blade.php
+     * @return login.createleclogin.blade.php
      */
     public function createLecLogin()
     {   
@@ -67,7 +67,7 @@ class LoginController extends Controller
      * Save the lecturer login.
      *
      * @param  Request
-     * @return Response
+     * @return login.createleclogin.blade.php
      */
     public function saveLecLogin(Request $request)
     { 
@@ -88,4 +88,46 @@ class LoginController extends Controller
             return view('login/createleclogin');
     }
 
+
+    /**
+     * Show the login page.
+     *
+     * @param  null
+     * @return login.login.blade.php
+     */
+    public function login()
+    {
+        return view('login/login');
+    }
+
+    /**
+     * Validate login.
+     *
+     * @param  Request
+     * @return login.login.blade.php
+     */
+    public function validateLogin(Request $request)
+    {
+       $this->validate($request,[
+        'email'=>'required|regex:/[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}/',
+        'password'=>'required',
+            ]);
+       $credentials = [
+                'email'    =>  $request->input('email'),
+                'password' =>  $request->input('password'),
+      ];
+        Sentinel::authenticate($credentials);
+    //     // Sentinel:: ($credentials);
+    // return view('/admin/master');
+      if (Sentinel::check()) {
+         return view('/admin/dashboard');
+      }
+
+     else
+     {
+         return redirect('/login/login')->with('error', 'You must be logged to view the page');
+      }
+
+        
+     }
 }
