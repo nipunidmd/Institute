@@ -72,27 +72,23 @@
 			</thead>
 			<tbody>
 			@foreach($students as $student)
-	<tr >
-    <td>{{$student->id}}</td>
-    <td><b>{{$student->name}}</b></td>
-    <td>{{$student->dob}}</td>
-    <td>{{$student->address}}</td>
-    <td>{{$student->school}}</td>
-    <td><b>{{$student->nic}}</b></td>
-    <td>{{$student->telno}}</td>
-    <td>{{$student->email}}</td>
-    <td>{{$student->student_course->name }}</td>
-
-    <td><a  class="btn-primary btn"  href="{{url('student/update_student')}}/{{$student->id}}"><i class="fa fa-eye"></i></a>
-    	<a  class="btn-primary btn"  href="{{url('student/update_student')}}/{{$student->id}}"><i class="fa fa-eye"></i></a>
-    	<a class="edit-modal btn btn-info" href="{{url('student/editstudent/'.$student->id)}}"><i class="glyphicon glyphicon-edit "></i></a>
-        <a class="btn btn-round btn-danger" onclick="return confirm('Are you sure?')" href="{{url('student/delete')}}/{{$student->id}}"><i class="fa fa-trash"></i></a>
-
-
-
-        		
-    </tr>
-
+			<tr >
+			    <td>{{$student->id}}</td>
+			    <td><b>{{$student->name}}</b></td>
+			    <td>{{$student->dob}}</td>
+			    <td>{{$student->address}}</td>
+			    <td>{{$student->school}}</td>
+			    <td><b>{{$student->nic}}</b></td>
+			    <td>{{$student->telno}}</td>
+			    <td>{{$student->email}}</td>
+			    <td>{{$student->student_course?$student->student_course->name:"--" }}</td>
+			    <td>
+			    	
+			    	<a  class="btn-dark btn"  href="{{url('student/student_update')}}/{{$student->id}}"><i class="fa fa-eye"></i></a>
+			    	<a class="edit-dark btn btn-dark" href="{{url('student/student_update/'.$student->id)}}"><i class="glyphicon glyphicon-edit "></i></a>
+			        <a class="btn btn btn-dark" onclick="return confirm('Are you sure?')" href="{{url('student/student_delete')}}/{{$student->id}}"><i class="fa fa-trash"></i></a>
+			    </td>        		
+   			</tr>
 		@endforeach
 		</tbody>
 		</table>
