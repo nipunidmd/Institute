@@ -30,6 +30,17 @@ Route::get('lecturer/lecturer_delete/{id}','LecturerController@lecturerDelete');
 Route::get('admin/master','AdminController@view');
 Route::get('admin/dashboard','AdminController@view');
 
+
+// Route::get('admin/master','AdminController@view');
+// Route::get('admin/dashboard','AdminController@view');
+// Route::get('admin/studentlist','StudentController@studentView');
+// Route::get('admin/viewedit', 'AdminController@viewedit');
+// Route::get('admin/editstudent/{id}', 'AdminController@edit');
+
+// Route::get('/student/delete/{id}','AdminController@destroy');
+// Route::post('student/updatestudent', 'AdminController@update')->name('student.update');
+// Route::get('student/searchstudent', 'AdminController@search')->name('student.search');
+
 // ROUTES FOR COURSE
 Route::get('course/course_add','CourseController@courseAdd');
 Route::post('course/course_add','CourseController@courseSave');
@@ -43,6 +54,13 @@ Route::get('course/course_delete/{id}','CourseController@courseDelete');
 Route::get('/student/student_add','StudentController@studentAdd');
 Route::post('/student/student_add','StudentController@studentSave');
 
+Route::get('student/student_list','StudentController@studentView');
+Route::get('student/viewedit', 'StudentController@viewedit');
+Route::get('student/editstudent/{id}', 'StudentController@edit');
+Route::get('/student/delete/{id}','StudentController@destroy');
+Route::post('student/update_student', 'StudentController@update')->name('student.update');
+Route::get('student/searchstudent', 'StudentController@search')->name('student.search');
+
 
 //ROUTES FOR CREATE LOGINS
 Route::get('/login/createstulogin','LoginController@createStuLogin');
@@ -50,13 +68,3 @@ Route::post('/login/createstulogin','LoginController@saveStuLogin');
 Route::get('/login/createleclogin','LoginController@createLecLogin');
 Route::post('/login/createleclogin','LoginController@saveLecLogin');
 
-Route::get('/student/student_list','StudentController@studentlist');
-Route::get('student/viewedit','StudentController@viewedit');
-Route::get('student/student_update/{id}','StudentController@studentUpdate');
-Route::get('/student/student_delete/{id}','StudentController@studentDelete');
-Route::post('student/student_update/{id}','StudentController@studentSaveUpdate');
-Route::get('student/searchstudent','StudentController@search')->name('student.search');
-
-
-//ROUTES FOR TASKS
-Route::post('/task/add_task','TaskController@addtask');

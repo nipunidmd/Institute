@@ -62,7 +62,7 @@ class StudentController extends Controller
     }
 
 
-    public function studentlist()
+    public function studentView()
     {  //Get the list of students from the database table
         // $students = Student::all();
         

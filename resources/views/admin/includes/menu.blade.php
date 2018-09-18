@@ -22,9 +22,9 @@
                   <li><a><i class="fa fa-list-alt"></i> Show list <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
 
-                      <li><a href="http://localhost/Institute/public/student/student_list">Student list</a></li>
-                      <li><a href="http://localhost/Institute/public/lecturer/lecturer_list">Lecturer list</a></li>
-                      <li><a href="http://localhost/Institute/public/course/course_list">Course list</a></li>
+                      <li><a href="http://localhost:8080/Institute/public/student/student_list">Student list</a></li>
+                      <li><a href="http://localhost:8080/Institute/public/lecturer/lecturer_list">Lecturer list</a></li>
+                      <li><a href="http://localhost:8080/Institute/public/course/course_list">Course list</a></li>
 
                     </ul>
                   </li>
