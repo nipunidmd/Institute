@@ -70,16 +70,11 @@ class StudentController extends Controller
     }
 
 
-    public function destroy(Request $request) 
+    public function studentDelete(Request $request) 
     {
         $student = Student::find($request->id)->delete();
         return redirect('/student/student_list');
     }
-
-    // public function studentUpdate()
-    // {
-    //     return view('student.update_student');
-    // }
 
 
     public function studentUpdate(Request $request, $id)
