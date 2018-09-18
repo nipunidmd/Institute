@@ -53,7 +53,7 @@ Route::post('/login/createleclogin','LoginController@saveLecLogin');
 Route::get('/student/student_list','StudentController@studentlist');
 Route::get('student/viewedit','StudentController@viewedit');
 Route::get('student/student_update/{id}','StudentController@studentUpdate');
-Route::get('/student/student_delete/{id}','StudentController@destroy');
+Route::get('/student/student_delete/{id}','StudentController@studentDelete');
 Route::post('student/student_update/{id}','StudentController@studentSaveUpdate');
 Route::get('student/searchstudent','StudentController@search')->name('student.search');
 
