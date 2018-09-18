@@ -50,7 +50,7 @@
 			<div class="form-group">
 				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Name<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-				<input type="text" class="form-control" pattern="[A-Za-z]+" required="required" id="name" name="name" required>
+				<input type="text" class="form-control" pattern="[A-Za-z]+" required="required" id="name" name="name" placeholder="Ex: Tharindu Pathirana" required>
 			</div>
 				@if($errors->has('name'))
                 		<span class="help-block">{{$errors->first('name')}}</span>
@@ -62,7 +62,7 @@
 			<div class="form-group">
 				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Date of birth<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-				<input type="date" class="form-control" id="dob" name="dob" required></div>
+				<input type="date" class="form-control" id="dob" name="dob" placeholder="Select your birth date" required></div>
 				@if($errors->has('dob'))
                 		<span class="help-block">{{$errors->first('dob')}}</span>
                 @endif
@@ -73,7 +73,7 @@
 			<div class="form-group">
 				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Address<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-				<input type="text" class="form-control" id="address" name="address"  required></div>
+				<input type="text" class="form-control" id="address" name="address" placeholder="Ex: 12,Temple Lane,Kotte" required></div>
 				@if($errors->has('address'))
                 		<span class="help-block">{{$errors->first('address')}}</span>
                 @endif
@@ -84,7 +84,7 @@
 			<div class="form-group">
 				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">School<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-				<input type="text" class="form-control" id="school" name="school" required></div>
+				<input type="text" class="form-control" id="school" name="school" placeholder="Ex: Colombo Central College" required></div>
 				@if($errors->has('school'))
                 		<span class="help-block">{{$errors->first('school')}}</span>
                 @endif
@@ -95,7 +95,7 @@
 			<div class="form-group">
 				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">NIC<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-				<input type="text" class="form-control" id="nic" name="nic" maxlength=12 pattern="[v0-9]+" required></div>
+				<input type="text" class="form-control" id="nic" name="nic" maxlength=12 pattern="[v0-9]+" placeholder="Ex: xxxxxxxxx v" required></div>
 				@if($errors->has('nic'))
                 		<span class="help-block">{{$errors->first('nic')}}</span>
                 @endif
@@ -106,7 +106,7 @@
 			<div class="form-group">
 				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Mobile No<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-				<input type="number" class="form-control" id="mobno" name="telno" required></div>
+				<input type="number" class="form-control" id="mobno" name="telno" placeholder="Ex: 07x xxxxxxx" required></div>
 				@if($errors->has('telno'))
                 		<span class="help-block">{{$errors->first('telno')}}</span>
                 @endif
@@ -117,7 +117,7 @@
 			<div class="form-group">
 				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Email<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
-				<input type="text" class="form-control" id="email" name="email" required></div>
+				<input type="text" class="form-control" id="email" name="email" placeholder="Ex: xxx@xxx.xxx" required></div>
 				@if($errors->has('email'))
                 		<span class="help-block">{{$errors->first('email')}}</span>
                 @endif
