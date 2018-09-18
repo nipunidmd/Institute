@@ -12,7 +12,7 @@ use App\Models\Lecturer;
 class CourseController extends Controller
 {
     /**
-     * Show the profile for the given user.
+     
      *
      * @param  int  $id
      * @return Response
@@ -33,50 +33,56 @@ class CourseController extends Controller
      */
     public function courseSave(Request $request)
     {
-        // return $request->all();
-        //validation
-      
-        $this->validate($request,[
+        try{
+            $this->validate($request,[
                 'name'=>'required',
                 'description'=>'required',
-                'nvq_level'=>'required'      
-        ]);
+                'nvq_level'=>'required' ,
+                'content'=>'required',
+                'mname'=>'required' 
+            ]);
 
-        $this->validate($request,[
-                'mname'=>'required',
-                'content'=>'required'
+            //add new course
+            $course = Course::create([
+                'name' => $request->name,
+                'description' => $request->description,
+                'nvq_level' => $request->nvq_level 
+            ]);
 
-               
-        ]);
+            $mNames = $request->input('mname');
+            $contents = $request->input('content');
+            $lecturers = $request->input('lecturer');
 
-        //add new course
+            if($course){
+                if($mNames){
+                    foreach($mNames as $key => $mName){
+                        $module = Module::create([
+                            'name' => $mName,
+                            'content' => $contents[$key],
+                            'lec_id' => $lecturers[$key],
+                            'course_id' => $course->id                        
+                        ]);
+                    }
 
-        $course = Course::create([
-            'name' => $request->name,
-            'description' => $request->description,
-            'nvq_level' => $request->nvq_level
-            
-        ]);
-
-        $module = Module::create([
-            'name' => $request->mname,
-            'content' => $request->content,
-            'lec_id' => $request->id,
-            'course_id' => $course->id
-            // 'course_id' => $request->lastInsertId()
-            
-        ]);
-
-        //redirect to the course list page
-        return redirect('course/course_add');
+                    //redirect to the course list page
+                    return redirect('course/course_add');
+                }else{
+                    throw new \Exception("Invalid data found!");
+                }
+            }else{
+                throw new \Exception("Course data couldn't save!");
+            }
+        }catch(\Exception $e){
+            return $e->getMessage();
+        }
     }
 
          
      public function courseList(){
 
-        //MODEL please give me list of students
+        //MODEL please give me list of courses
        
-        $course = Course::all();//GETTING ALL LIST FROM INSTITUTE TABLE
+        $course = Course::all();//GETTING ALL LIST FROM COURSE TABLE
         return view('course.course_list',['course'=>$course]);
     }
 
@@ -129,7 +135,7 @@ class CourseController extends Controller
      * delete the institute detils from the database.
      *
      * @param  Request
-     * @return student.lists.blade.php view 
+     * @return course.lists.blade.php view 
      */
     public function courseDelete(Request $request) 
     {

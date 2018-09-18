@@ -73,8 +73,13 @@ class StudentController extends Controller
     public function studentDelete(Request $request) 
     {
         $student = Student::find($request->id)->delete();
+
         return redirect('/student/student_list');
+
+        
     }
+
+   
 
 
     public function studentUpdate(Request $request, $id)
@@ -102,7 +107,11 @@ class StudentController extends Controller
         $student ->course_id = $request ->course_id;        
         $student ->save();
 
+
         return redirect('/student/student_list');
+
+
+
     }
 
     // public function search(Request $request){
@@ -139,6 +148,15 @@ class StudentController extends Controller
 
     
  
+
+
+
+    
+ 
+// }
+//         return view('admin.dashboard');
+//}
+    
 
 
 

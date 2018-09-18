@@ -29,16 +29,7 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Course Registration</h2>
-                    <ul class="nav navbar-center panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                   
                     <div class="clearfix"></div>
                   </div><!--End of X-title-->
                   <div class="x_content">
@@ -51,7 +42,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Course Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="name" pattern="[A-Za-z]+" required="required" name="name" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="name" pattern="[A-Za-z]+" required="required" placeholder = "ex: IT"name="name" class="form-control col-md-7 col-xs-12">
                         </div>
                         <br>
                         <br>
@@ -59,7 +50,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Description">Description <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="description" name="description" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="description" name="description" required="required" placeholder = "ex: Foundation Course" class="form-control col-md-7 col-xs-12">
                         </div>
                         <br>
                         <br>
@@ -79,6 +70,7 @@
                         <br>
                         <br>
                          <h2>Module Registration<small> Add new module</small></h2>
+                         <label>Add the module name, content and the relevant qualified lecturer for the module</label>
                          <br>
                         <tr>
                            <table border=1 class="table" id="myTable">
@@ -93,9 +85,9 @@
                             @for($i=0;$i < 5;$i++)
                               <tr class="active">
                                 <td class="text-center last">
-                                  <input type="text" class="form-control col-md-7 col-xs-12" name="mname[]">
+                                  <input type="text" placeholder = "ex: IPE" class="form-control col-md-7 col-xs-12" name="mname[]">
                                 <td>
-                                <input type="text" class="form-control col-md-7 col-xs-12" name="content[]">
+                                  <input type="text" placeholder = "ex: Introduction to Programming" class="form-control col-md-7 col-xs-12" name="content[]">
                                 </td>
                                <td>
                                 <select class="form-control" name='lecturer[]'>          
