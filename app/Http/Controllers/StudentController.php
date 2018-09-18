@@ -118,21 +118,21 @@ class StudentController extends Controller
      public function search(Request $request)
      {
         
-        $student = DB::table('Student')->where('name','LIKE','%', $request '%')->get();         
-         foreach($students as $key =>$student){
-           $output.='<tr>'
-                    '<td>'.$student->id.'</td>'.
-                    '<td>'.$student->name.'</td>'.
-                    '<td>'.$student->dob.'</td>'.
-                    '<td>'.$student->address.'</td>'.
-                    '<td>'.$student->school.'</td>'.
-                    '<td>'.$student->nic.'</td>'.
-                    '<td>'.$student->telno.'</td>'.
-                    '<td>'.$student->email.'</td>'.
-                    '<td>'.$student->course_id.'</td>'.
-                    '</tr>';
-         }
-         return Response ($output);
+        // $student = DB::table('Student')->where('name','LIKE','%', $request '%')->get();         
+        //  foreach($students as $key =>$student){
+        //    $output.='<tr>'
+        //             '<td>'.$student->id.'</td>'.
+        //             '<td>'.$student->name.'</td>'.
+        //             '<td>'.$student->dob.'</td>'.
+        //             '<td>'.$student->address.'</td>'.
+        //             '<td>'.$student->school.'</td>'.
+        //             '<td>'.$student->nic.'</td>'.
+        //             '<td>'.$student->telno.'</td>'.
+        //             '<td>'.$student->email.'</td>'.
+        //             '<td>'.$student->course_id.'</td>'.
+        //             '</tr>';
+        //  }
+        //  return Response ($output);
      
      // }
      }
