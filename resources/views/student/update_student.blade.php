@@ -25,7 +25,7 @@
                   </div>
                   <div class="x_content">
                     <br>
-                    <form method="POST" action="{{ route('student.update') }}" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
+                    <form method="POST" action="{{ url('student/student_update')}}/{{$student->id}}" id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
                     	<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                     	 <div class="form-group">

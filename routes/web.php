@@ -50,9 +50,13 @@ Route::post('/login/createstulogin','LoginController@saveStuLogin');
 Route::get('/login/createleclogin','LoginController@createLecLogin');
 Route::post('/login/createleclogin','LoginController@saveLecLogin');
 
-Route::get('/student/student_list','StudentController@studentView');
+Route::get('/student/student_list','StudentController@studentlist');
 Route::get('student/viewedit','StudentController@viewedit');
-Route::get('student/editstudent/{id}','StudentController@edit');
-Route::get('/student/delete/{id}','StudentController@destroy');
-Route::post('student/update_student','StudentController@update')->name('student.update');
+Route::get('student/student_update/{id}','StudentController@studentUpdate');
+Route::get('/student/student_delete/{id}','StudentController@destroy');
+Route::post('student/student_update/{id}','StudentController@studentSaveUpdate');
 Route::get('student/searchstudent','StudentController@search')->name('student.search');
+
+
+//ROUTES FOR TASKS
+Route::post('/task/add_task','TaskController@addtask');

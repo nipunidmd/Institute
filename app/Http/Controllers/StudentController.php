@@ -61,7 +61,7 @@ class StudentController extends Controller
     }
 
 
-    public function studentView()
+    public function studentlist()
     {  //Get the list of students from the database table
         // $students = Student::all();
         
@@ -76,20 +76,20 @@ class StudentController extends Controller
         return redirect('/student/student_list');
     }
 
-    public function viewedit()
-    {
-        return view('student.update_student');
-    }
+    // public function studentUpdate()
+    // {
+    //     return view('student.update_student');
+    // }
 
 
-    public function edit(Request $request, $id)
+    public function studentUpdate(Request $request, $id)
     {
 
      $student = Student::all()->find($request -> id);
      return view('student.update_student', compact('student'));
     }
 
-    public function update(Request $request){
+    public function studentSaveUpdate(Request $request){
         
         $this->validate($request,[
             'name'=>'required| min:4'

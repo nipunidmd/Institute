@@ -84,7 +84,7 @@
     <td>{{$student->student_course->name }}</td>
     <td><a  class="btn-dark btn"  href="{{url('student/update_student')}}/{{$student->id}}">
     	<i class="fa fa-eye"></i></a>
-    	<a class="edit-modal btn btn-dark" href="{{url('student/editstudent/'.$student->id)}}"><i class="glyphicon glyphicon-edit "></i></a>
+    	<a class="edit-modal btn btn-dark" href="{{url('student/student_update/'.$student->id)}}"><i class="glyphicon glyphicon-edit "></i></a>
         <a class="btn btn-round btn-dark" onclick="return confirm('Are you sure?')" href="{{url('student/delete')}}/{{$student->id}}"><i class="fa fa-trash"></i></a>
 
 
