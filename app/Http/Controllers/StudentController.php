@@ -20,6 +20,7 @@ class StudentController extends Controller
     {
          $courses = Course::whereNull('deleted_at')
             ->get();
+            //list
         return view('student.student_add',compact('courses'));
     }
 
