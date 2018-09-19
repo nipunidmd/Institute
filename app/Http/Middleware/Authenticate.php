@@ -21,6 +21,7 @@ class Authenticate
         if (!Sentinel::check()) {
             return redirect('/login');
         }
+        $request->share('user',Sentinel::getUser());
         return $next($request);
     }
 }

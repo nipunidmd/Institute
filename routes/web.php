@@ -58,4 +58,6 @@ Route::post('/login/createleclogin','LoginController@saveLecLogin');
 //ROUTES FOR TASKS
 Route::get('/task/add_task','TaskController@addtask');
 
-//routes
+//ROUTES FOR LOGIN
+Route::get('/login/login','LoginController@login');
+Route::post('/login/login','LoginController@validateLogin');
