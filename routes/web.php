@@ -12,6 +12,8 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+
 // ROUTES FOR LECTURER
 Route::get('lecturer/lecturer_add','LecturerController@lecturerAdd');
 Route::post('lecturer/lecturer_add','LecturerController@lecturerSave');
@@ -22,9 +24,11 @@ Route::get('lecturer/lecturer_view/{id}','LecturerController@lecturerView');
 Route::get('lecturer/lecturer_update/{id}','LecturerController@lecturerEdit');
 Route::post('lecturer/lecturer_update/{id}','LecturerController@lecturerUpdate');
 Route::get('lecturer/lecturer_delete/{id}','LecturerController@lecturerDelete');
+
 // ROUTES FOR ADMIN
 Route::get('admin/master','AdminController@view');
 Route::get('admin/dashboard','AdminController@view');
+
 // ROUTES FOR COURSE
 Route::get('course/course_add','CourseController@courseAdd');
 Route::post('course/course_add','CourseController@courseSave');

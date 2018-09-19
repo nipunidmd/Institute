@@ -53,7 +53,7 @@
 					</script>
 				<br>
 
-		<a href="http://localhost:8080/Institute/public/lecturer/lecturer_list" class="btn btn-primary pull-left"> Back</a><!--back to Lecturer list-->
+		<a href="{{url('/lecturer/lecturer_list')}}" class="btn btn-primary pull-left"> Back</a><!--back to Lecturer list-->
 		<!-- <button type="cancel" class="btn btn-primary" onClick="history.back()">Back</button> -->
 	</div>
 	</form>

@@ -1,13 +1,12 @@
 <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
+      <div class="nav_menu">
+          <nav>
               <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
               <div class="nav toggle">
-                <a href="http://localhost:8080/Institute/public/admin/dashboard"; id="menu_toggle"><i class="fa fa-tachometer">
+                <a href="{{url('/admin/dashboard')}}"; id="menu_toggle"><i class="fa fa-tachometer">
                   
-
                 </i></a>
               </div>
              
@@ -22,6 +21,7 @@
                   </ul>
                 </li>
              </ul>
-            </nav>
-          </div>
-        </div>
+
+          </nav>
+      </div>
+</div>

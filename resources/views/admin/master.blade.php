@@ -44,7 +44,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="http://localhost:8080/Institute/public/admin/master" class="site_title"><i class="fa fa-graduation-cap"></i> <span>IMS</span></a>
+              <a href="{{url('/admin/master')}}" class="site_title"><i class="fa fa-graduation-cap"></i> <span>IMS</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -82,8 +82,7 @@
         <div class="right_col" role="main" style="padding-bottom: 200px;">
 
    
-          
-
+        
          @yield('content')
          
         </div>
@@ -94,7 +93,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Institute Management System by <a href="https://colorlib.com">Colorlib</a>
+            Institute Management System by <a href="https://colorlib.com">AANSY</a>
           </div>
           <div class="clearfix"></div>
         </footer>

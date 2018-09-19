@@ -27,6 +27,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
+                  	
                     <h2>Student Registration</h2>
                     
                     <div class="clearfix"></div>
@@ -131,7 +132,7 @@
 			<div class="ln_solid"></div>
                       <div class="form-group">
                          <button type="submit" class="btn btn-primary pull-right">Submit</button>
-          				<a href="http://localhost:8080/Institute/public/student/student_list" class="btn btn-primary pull-right">List</a>
+          				<a href="{{url('/student/student_list')}}" class="btn btn-primary pull-right">List</a>
                         </div>
                       </div>
 			

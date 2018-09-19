@@ -37,7 +37,7 @@
                     <form id="demo-form2" method = "POST" role= "form" data-parsley-validate class="form-horizontal form-label-left">
                         <input type="hidden" name="_token" value = "{{csrf_token() }}">
                     
-
+                    
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Course Name <span class="required">*</span>
                         </label>
@@ -57,18 +57,19 @@
                       
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="NVQ level">NVQ Level</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <!-- <input type="text" id="nvq_level" class="form-control col-md-7 col-xs-12" name="nvq_level"> -->
-                          <select class="form-control col-md-6 col-sm-6 col-xs-12" name="nvq_level">
-                          <option value="Level 1">Level 1</option>
-                          <option value="Level 2">Level 2</option>
-                          <option value="Level 3">Level 3</option>
-                          <option value="Level 4">Level 4</option>
-                          <option value="Level 5">Level 5</option>
-                          </select>
+                            <select class="form-control col-md-6 col-sm-6 col-xs-12" name="nvq_level">
+                            <option value="Level 1">Level 1</option>
+                            <option value="Level 2">Level 2</option>
+                            <option value="Level 3">Level 3</option>
+                            <option value="Level 4">Level 4</option>
+                            <option value="Level 5">Level 5</option>
+                            </select>
                         </div>
                         <br>
                         <br>
                         <br>
+
+
                          <h2>Module Registration<small> Add new module</small></h2>
                          <label>Add the module name, content and the relevant qualified lecturer for the module</label>
                          <br>
@@ -81,6 +82,7 @@
                                 <th>Lecturer</th>
                             </tr>
                           </thead>
+
                           <tbody>
                             @for($i=0;$i < 5;$i++)
                               <tr class="active">
@@ -106,8 +108,8 @@
                       <div class="form-group">
                       
  
-           <button type="submit" class="btn btn-primary pull-right">Submit</button>
-          <a href="http://localhost:8080/Institute/public/course/course_list" class="btn btn-primary pull-right">List</a>
+                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                        <a href="{{url('/course/course_list')}}" class="btn btn-primary pull-right">List</a>
                         </form>
                         </div>
                       </div>

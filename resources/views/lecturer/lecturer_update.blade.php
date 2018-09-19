@@ -57,8 +57,8 @@
 				<br>
 
 		<button type="submit" class="btn btn-primary pull-right"> Submit</button>
+		<a href="{{url('/lecturer/lecturer_list')}}" class="btn btn-primary pull-right">List</a>
 
-		<a href="http://localhost:8080/Institute/public/lecturer/lecturer_list" class="btn btn-primary pull-right">List</a>
 		<button type="cancel" class="btn btn-primary" onClick="history.back()">Back</button>
 
 	</div>

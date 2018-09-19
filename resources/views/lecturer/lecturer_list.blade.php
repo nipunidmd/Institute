@@ -2,13 +2,33 @@
 @extends('admin.master')
 
 @section('content')
-<!--c-->
+
 <section class="content">
-
- <div class="panel panel-default">
- 	<div class="panel-heading">Lecturer List</div>
-    <div class="panel-body">
-
+<div class="title_center" role="main">
+          
+            <div class="page-title">
+             <div class="title_center">
+                <div class="col-md-6 col-sm-6 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    
+                  </div><!--End of input group-->
+                </div><!--End of col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search-->
+              </div><!--End of title right-->
+            </div><!--End of page title-->
+            <div class="clearfix"></div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                  	
+                    <h2>Lecturer List</h2>
+                    
+                    <div class="clearfix"></div>
+                  </div><!--End of X-title-->
+                  <div class="x_content">
+                    <br>
+                    <form id="demo-form2" method = "POST" role= "form" data-parsley-validate class="form-horizontal form-label-left">
+                        <input type="hidden" name="_token" value = "{{csrf_token() }}">
 
     <table class="table table-bordered">
 		<div class="title_right">
@@ -45,18 +65,20 @@
 		@foreach($lecturer as $lecturer)		
 				<tr>
 					<td>{{$lecturer->id}}</td>
-					<td>{{$lecturer->name}}</td>
+					<td><b>{{$lecturer->name}}</b></td>
 					<!-- <td>{{$lecturer->nic}}</td> -->
 					<!-- <td>{{$lecturer->address}}</td> -->
 					<td>{{$lecturer->mobileNo}}</td>
 					<td>{{$lecturer->email}}</td>
-					<td>{{$lecturer->qualification}}</td>
+					<td><b>{{$lecturer->qualification}}</b></td>
 					<!-- <td>{{$lecturer->dob}}</td> -->
 
 					<td>
+
 						<a href="{{url('lecturer/lecturer_view')}}/{{$lecturer->id}}" class="btn-primary btn"><i class="fa fa-eye"></i></a>
 						<a class="edit-modal btn btn-info" href="{{url('lecturer/		lecturer_update')}}/{{$lecturer->id}}"><i class="glyphicon glyphicon-edit"></i></a>
         			<a class="btn btn-round btn-danger" onclick="return confirm('Are you sure?')" href="{{url('lecturer/lecturer_delete')}}/{{$lecturer->id}}"><i class="fa fa-trash"></i></a>		
+
 
 					</td>
 				</tr>
@@ -76,7 +98,9 @@
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
  		<script src="lecturer Details"></script>
 	
-
+</div>
+</div>
+</div>
 </div><!--End of panel-body-->
 </body><!--End of panel-default-->
 </section>

@@ -11,7 +11,7 @@
     <div class="panel-heading">Course Details</div>
     <div class="panel-body">
 
-<div class="box-body">
+	<div class="box-body">
 	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3">
 	<form method = "POST" role= "form"  class="form-horizontal">
 
@@ -29,7 +29,7 @@
 
 			<label for ="" class="control-label"> NVQ Level  </label>
 				
-                               <select class="form-control col-md-6 col-sm-6 col-xs-12 name="nvq_level">
+                          <select class="form-control col-md-6 col-sm-6 col-xs-12 name="nvq_level">
                           <option value="Level 1">Level 1</option>
                           <option value="Level 2">Level 2</option>
                           <option value="Level 3">Level 3</option>
@@ -38,13 +38,11 @@
                           </select>
 				<br>
 
-		<a href="http://localhost:8080/Institute/public/course/course_list" class="btn btn-primary pull-left"> Back</a><!--back to Lecturer list-->
-		<!-- <button type="cancel" class="btn btn-primary" onClick="history.back()">Back</button> -->
+		<a href="{{url('/course/course_list')}}" class="btn btn-primary pull-left"> Back</a>
 	</div>
 	</form>
  
-</div> <!--End of col-xs-6 col-sm-6 col-md-6 col-lg-6 col-md-offset-3-->
-
+</div> 
 
 </div><!--END OF box-body -->
 </div><!--End of pannel Body-->
