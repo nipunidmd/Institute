@@ -47,7 +47,7 @@
 		
 		
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Task ID<span class="required">*</span></label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Task Name<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				<input type="text" class="form-control" pattern="" required="required" id="name" name="name" required>
 			</div>
@@ -83,7 +83,7 @@
              <br>
 
 			<div class="form-group">
-				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Assingned by<span class="required">*</span></label>
+				<label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" for="content">Assigned by<span class="required">*</span></label>
 				<div class="col-md-6 col-sm-6 col-xs-12">
 				<select type="option" class="form-control" id="mobno" name="telno" required></div>
 				

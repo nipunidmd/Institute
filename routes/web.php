@@ -33,22 +33,25 @@ Route::get('/course/course_view/{id}', 'CourseController@courseView');
 Route::get('/course/course_update/{id}', 'CourseController@courseEdit');
 Route::post('/course/course_update/{id}', 'CourseController@courseUpdate');
 Route::get('course/course_delete/{id}','CourseController@courseDelete');
+
 // ROUTES FOR STUDENT
 Route::get('/student/student_add','StudentController@studentAdd');
 Route::post('/student/student_add','StudentController@studentSave');
+Route::get('/student/student_list','StudentController@studentView');
+Route::get('/student/student_list','StudentController@studentlist');
+Route::get('student/viewedit','StudentController@viewedit');
+Route::get('student/student_update/{id}','StudentController@studentUpdate');
+Route::get('/student/student_delete/{id}','StudentController@studentDelete');
+Route::post('student/student_update/{id}','StudentController@studentSaveUpdate');
+Route::get('student/searchstudent','StudentController@search')->name('student.search');
+
 //ROUTES FOR CREATE LOGINS
 Route::get('/login/createstulogin','LoginController@createStuLogin');
 Route::post('/login/createstulogin','LoginController@saveStuLogin');
 Route::get('/login/createleclogin','LoginController@createLecLogin');
 Route::post('/login/createleclogin','LoginController@saveLecLogin');
 
-
-Route::get('/student/student_list','StudentController@studentView');
-Route::get('student/viewedit','StudentController@viewedit');
-Route::get('student/student_update/{id}','StudentController@studentUpdate');
-Route::get('/student/student_delete/{id}','StudentController@studentDelete');
-Route::post('student/student_update/{id}','StudentController@studentSaveUpdate');
-Route::get('student/searchstudent','StudentController@search')->name('student.search');
 //ROUTES FOR TASKS
-Route::post('/task/add_task','TaskController@addtask');
+Route::get('/task/add_task','TaskController@addtask');
 
+//routes
