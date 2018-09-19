@@ -53,7 +53,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name"> Name <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="name" name="name" required="required" class="form-control col-md-7 col-xs-12" pattern="[A-Za-z]+">
+                          <input type="text" id="name" name="name" required="required" class="form-control col-md-7 col-xs-12" pattern="[A-Za-z]+" >
                         </div>
                        <!--check that name -->
                             @if($errors->has('name'))
@@ -67,7 +67,11 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nic"> National identity card number <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
+
                           <input type="text" id="nic" name="nic" required="required" class="form-control col-md-7 col-xs-12" placeholder="ex:xxxxxxxxxV">
+
+
+
                         </div>
                         <!--check that nic-->
                         @if($errors->has('nic'))
@@ -94,7 +98,9 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Mobile"> Mobile Number <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
+
                           <input type="text" id="Mobile" name="Mobile" required="required" class="form-control col-md-7 col-xs-12" placeholder="ex:0112365478">
+
                         </div>
                 <!--check that mobile number-->
                 @if($errors->has('Mobile'))
@@ -107,7 +113,9 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Email"> Email <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
+
                           <input type="text" id="Email" name="Email" required="required" class="form-control col-md-7 col-xs-12" placeholder="ex :abc@gmail.com">
+
                         </div>
                     <!--check that email-->
                      @if($errors->has('Email'))
@@ -121,7 +129,9 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="qualifications"> Qualification <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
+
                           <input type="text" id="qualifications" name="qualifications" required="required" class="form-control col-md-7 col-xs-12" placeholder="ex: BSc(Hons.)Information Technology">
+
                         </div>
                         <!--check that qualification -->
                         @if($errors->has('qualifications'))

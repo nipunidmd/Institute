@@ -92,7 +92,7 @@ class LecturerController extends Controller
 	{
 	 //MODEL list of lecturer
        
-        $lecturer = Lecturer::all();//GETING ALL LIST FROM lecture TABLE
+        $lecturer =Lecturer::all();//GETING ALL LIST FROM lecture TABLE
         return view('lecturer.lecturer_list',['lecturer'=>$lecturer]);
 	}
 
