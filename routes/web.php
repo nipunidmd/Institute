@@ -57,6 +57,11 @@ Route::post('/login/createleclogin','LoginController@saveLecLogin');
 
 //ROUTES FOR TASKS
 Route::get('/task/add_task','TaskController@addtask');
+Route::get('/task/task_list','TaskController@taskList');
+// Route::get('/task/task_view/{id}', 'TaskController@taskView');
+// Route::get('/task/task_update/{id}', 'TaskController@taskEdit');
+// Route::post('/task/task_update/{id}', 'TaskController@taskUpdate');
+// Route::get('task/task_delete/{id}','TaskController@taskDelete');
 
 //ROUTES FOR LOGIN
 Route::get('/login/login','LoginController@login');

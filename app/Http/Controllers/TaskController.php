@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Task;
+use App\Models\Lecturer;
 
 
 class TaskController extends Controller
@@ -30,5 +32,16 @@ class TaskController extends Controller
 
 
 
+    /**
+     * Show the task list foe the lecturer.
+     *
+     * @param  null
+     * @return task.task_list.blade.php
+     */
+    public function taskList()
+    {
+        $tasks =Task::with('lect')->get();//GETING ALL LIST FROM TASK TABLE
+        return view('task.task_list',['tasks'=>$tasks]);
+    }
 
 }
