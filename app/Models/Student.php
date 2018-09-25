@@ -18,7 +18,7 @@ class Student extends Model
 
 	public function student_course()
 	{
-		//if you belongs ton1 param is forrign key 2nd primary key
+		//if you belongs ton1 param is foreign key 2nd primary key
 		return $this->belongsTo('App\Models\Course','course_id', 'id');
 	}
 

@@ -17,6 +17,15 @@
 					<div class="form-group">
 
 						<table class="table table-bordered">
+							 <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="search1" name="search1" placeholder="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" onclick = "{{route('task.task_search')}}">Go!</button>>
+                    </span>
+                   
+                  </div>
+                </div>
 							<thead>
 								<tr>
 									<th>Task No</th>
