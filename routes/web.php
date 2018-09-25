@@ -9,9 +9,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 
 // ROUTES FOR LECTURER
@@ -63,7 +60,6 @@ Route::get('/task/task_update/{id}', 'TaskController@taskEdit');
 Route::post('/task/task_update/{id}', 'TaskController@taskUpdate');
 Route::get('task/task_delete/{id}','TaskController@taskDelete');
 Route::get('task/task_search','TaskController@taskSearch');
-
 
 //ROUTES FOR LOGIN
 Route::get('/login/login','LoginController@login');
